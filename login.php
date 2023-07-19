@@ -19,12 +19,12 @@
                 <h1>Login</h1>
                 <div class="form-input">
                     <label>Username</label>
-                    <br><input type="email" name="email" id="email" placeholder="email" autocomplete="off">
+                    <br><input type="email" name="email" id="email" placeholder="email" autocomplete="off" required>
                     <br><br>
                 </div><br>
                 <div class="form-input">
                     <label>Password</label>
-                    <br><input type="password" name="password" placeholder="password" id="password">
+                    <br><input type="password" name="password" placeholder="password" id="password" required>
                 </div>
                 
                    <button type="submit" name="submit" class="btn">Login</button>

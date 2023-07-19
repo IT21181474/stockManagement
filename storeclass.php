@@ -58,6 +58,7 @@ class MyStore{
             if($total > 0){
                 echo "Welcome ".$user['first_name']." ".$user['last_name'];
                 $this->set_userdata($user);
+                header("Location: products.php");
             }else{
                 echo "Login Failed";
 
@@ -137,7 +138,7 @@ class MyStore{
                 $stmt = $connection->prepare("INSERT INTO members(`email`,`password`,`first_name`,`last_name`)VALUES
                 (?,?,?,?)");
                 $stmt->execute([$email, $password, $fname, $lname]);  
-                echo "Login Successful";
+                echo "User Added Successful";
                  
             }else{
                 echo "User Alredy Exists";
