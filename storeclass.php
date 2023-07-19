@@ -65,6 +65,8 @@ class MyStore{
         }
     }
 
+    
+
     public function set_userdata($array)
     {
         if(!isset($_SESSION)){
@@ -134,7 +136,9 @@ class MyStore{
                 $connection = $this->openConnection();
                 $stmt = $connection->prepare("INSERT INTO members(`email`,`password`,`first_name`,`last_name`)VALUES
                 (?,?,?,?)");
-                $stmt->execute([$email, $password, $fname, $lname]);   
+                $stmt->execute([$email, $password, $fname, $lname]);  
+                echo "Login Successful";
+                 
             }else{
                 echo "User Alredy Exists";
 
