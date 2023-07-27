@@ -4,8 +4,6 @@ require_once('storeclass.php');
 //$store = new Store();
 $products = $store->get_products();
 
-?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,18 +27,13 @@ $products = $store->get_products();
         <tbody>
             <tr><td>
 
-        <?php foreach($products as $product){?>
-            
-            <li><a href="product_details.php?id=<?= $product['ID'];?>"><?= $product['product_name'];?> | <?= $product
-            ['min_stock'];?></a></li><br>
-            <?php } ?>
-            </td></tr>
+                            ?>
+                            
         </tbody>
+                    </table>
+                </div>
 
-    </table><br>
-   
-        </ul>    
-   </div> 
+            </div>
 
 
 </body>
