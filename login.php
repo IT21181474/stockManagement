@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="form-container">
-            <form action="" method="post">
+            <form action="" id="loginForm" method="post">
                 <h1>Login</h1>
                 <div class="form-input">
                     <label>Username</label>
@@ -30,6 +30,7 @@
                    <button type="submit" name="submit" class="btn">Login</button>
                 
             </form>
+            
         </div>
     </div>
 </body>

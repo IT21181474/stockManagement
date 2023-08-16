@@ -35,7 +35,7 @@ if(isset($userdetails)){
             <tr>
                 <th>Action</th>
                 <th>Base Stock Qty</th>
-                <th>SRP</th>
+                <th>Price</th>
                 <th>Sales Qty</th>
                 <th>Total Sales</th>
                 <th>Qty Remaining</th>

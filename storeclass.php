@@ -54,11 +54,16 @@ class MyStore{
             $stmt->execute([$username, $password]);
             $user = $stmt->fetch();
             $total = $stmt->rowCount();
-
+            
             if($total > 0){
-                echo "Welcome ".$user['first_name']." ".$user['last_name'];
-                $this->set_userdata($user);
+                
+               
                 header("Location: products.php");
+                //echo "Welcome ".$user['first_name']." ".$user['last_name'];
+                $this->set_userdata($user);
+                echo '<script>alert("Login successful");</script>';
+                    
+
             }else{
                 echo "Login Failed";
 
@@ -66,6 +71,30 @@ class MyStore{
         }
     }
 
+//     public function login(){
+
+//         if(isset($_POST['submit'])){
+
+//         //event.preventDefault(); // Prevent form submission to avoid page refresh
+    
+//         // Get input values
+//         const username = document.getElementById("email").value;
+//         const password = document.getElementById("password").value;
+    
+//         // You would typically send the username and password to the server for authentication.
+//         // For simplicity, we'll assume the login is successful if the username and password are not empty.
+//         if (username.trim() !== "" && password.trim() !== "") {
+//             // Show success alert
+//             alert("Login successful! Welcome, " + username);
+    
+//             // Here, you can redirect the user to another page or perform other actions.
+//             // For example: window.location.href = "dashboard.html";
+//         } else {
+//             // Show error alert for an unsuccessful login
+//             alert("Login failed. Please try again.");
+    
+    
+// }}}
     
 
     public function set_userdata($array)
@@ -328,7 +357,7 @@ class MyStore{
     }
 
 }
-$store = new MyStore();
+//$store = new MyStore();
     
    
 
